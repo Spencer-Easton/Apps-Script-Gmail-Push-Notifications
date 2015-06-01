@@ -2,12 +2,12 @@ function doGet(){
   /* 
   
   
-  Manually run the function in this order:
-  0) run as webapp pointing to CloudAuthWindow();
+  Setup script in this order:
+  0)run as webapp pointing to CloudAuthWindow();
   1)makeTopic()
   2)subscribe()
   3)grantPublishRights()  
-  4)run as web app pointing to GmailAuthWindow()
+  4)run as webapp pointing to GmailAuthWindow()
   */
   
   
