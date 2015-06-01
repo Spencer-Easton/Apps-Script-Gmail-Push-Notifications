@@ -1,5 +1,17 @@
 function doGet(){
-  // return pubsubService() // run this once to get the token for the server
+  /* 
+  
+  
+  Manually run the function in this order:
+  0) run as webapp pointing to CloudAuthWindow();
+  1)makeTopic()
+  2)subscribe()
+  3)grantPublishRights()  
+  4)run as web app pointing to GmailAuthWindow()
+  */
+  
+  
+  //return CloudAuthWindow() // run this once to get the token for the server
   return GmailAuthWindow(); // run this to enroll an email;
 }
 
@@ -7,12 +19,12 @@ function doGet(){
 
 
 function doPost(e){
-  var ss = SpreadsheetApp.openById('1YOhCmlvQm15EDEazuhI-FYevigeoB-lEgBEN0NYCdwo');
+  var ss = SpreadsheetApp.openById('1YOhCmlvQm15EDEazuhI-FYevigeoB-lEgBEN0NYCdwo'); // change sheet id;
   var sheet = ss.getActiveSheet();
   
   var postdata = e.postData.getDataAsString();
   var message = Utilities.newBlob(Utilities.base64Decode(JSON.parse(postdata).message.data)).getDataAsString();
-  var emailData = getHistoryData(JSON.parse(message).historyId);
+  var emailData = getHistoryData(JSON.parse(message).historyId); // not useful like this. Need to get last historyId for meaningful data;
   sheet.appendRow([new Date(), message,emailData]); 
   
   
