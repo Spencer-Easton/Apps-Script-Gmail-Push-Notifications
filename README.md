@@ -16,6 +16,6 @@ Generate web credentials. Add the client_id and client_secret to the script prop
 1)makeTopic()  
 2)subscribe()  
 3)grantPublishRights()  
-4)run as web app pointing to GmailAuthWindow()
-5) enrollEmail() must be ran atleast one a week to remail active.
-5)Logging will start at this point.
+4)run as web app pointing to GmailAuthWindow()  
+5) enrollEmail() must be ran atleast one a week to remain active.  
+6)Logging will start at this point.
