@@ -1,3 +1,6 @@
+var TOPIC = "projects/api-project-772466249334/topics/gmailPush";
+var SUBSCRIPTION = "projects/api-project-772466249334/subscriptions/myGmailNotification";
+
 function pubsubService() {
   return OAuth2.createService('cloud')
       .setAuthorizationBaseUrl('https://accounts.google.com/o/oauth2/auth')
@@ -48,7 +51,7 @@ function makeTopic(){
                  muteHttpExceptions:true,
                  contentType:"application/json"                 
                 }
-  var url = "https://pubsub.googleapis.com/v1beta2/projects/api-project-772466249334/topics/gmailPush";
+  var url = "https://pubsub.googleapis.com/v1beta2/"+TOPIC;
   var results = UrlFetchApp.fetch(url, options);  
   Logger.log(results)
   
@@ -60,7 +63,7 @@ function subscribe(){
   
   
   var payload = {
-    "topic": "projects/api-project-772466249334/topics/gmailPush", 
+    "topic": TOPIC, 
     "pushConfig": {
       "pushEndpoint": "https://script.google.com/a/macros/ccsknights.org/s/AKfycbzuFMYaUBq4J7T31az-gEjRMbhBKB0Ad6qGMqbEGujfNR6WN5E/exec"
     }
@@ -74,7 +77,7 @@ function subscribe(){
                  payload:JSON.stringify(payload)
                  
                 }
-  var url = "https://pubsub.googleapis.com/v1beta2/projects/api-project-772466249334/subscriptions/myGmailNotification";
+  var url = "https://pubsub.googleapis.com/v1beta2/"+SUBSCRIPTION;
   var results = UrlFetchApp.fetch(url, options);  
   Logger.log(results)
   
@@ -85,7 +88,7 @@ function subscribe(){
 
 function grantPublishRights(){
   
-  var url = "https://pubsub.googleapis.com/v1beta2/projects/api-project-772466249334/topics/gmailPush:setIamPolicy";
+  var url = "https://pubsub.googleapis.com/v1beta2/"+TOPIC+":setIamPolicy";
   var payload = {
   "policy": {
     "bindings": [{
@@ -118,7 +121,7 @@ function enrollEmail(){
 
 
 var payload = {
-  topicName: "projects/api-project-772466249334/topics/gmailPush"  
+  topicName: TOPIC  
 }
   
 var options = {method:"POST",
