@@ -15,7 +15,7 @@ function enrollUser() {
   Logger.log(enrollEmail(testToken.token));
 }
 
-unction getAuthorizationToken(tokenDesc,email,scopes){
+function getAuthorizationToken(tokenDesc,email,scopes){
   var cache = PropertiesService.getScriptProperties();    
   var token = JSON.parse(cache.getProperty(tokenDesc));
   var nowTime = parseInt((Date.now()/1000).toString().substr(0,10));
