@@ -3,9 +3,9 @@
 // Run once to setup notifications
 function setupGmailPush(){
   var token = getAuthorizationToken("saToken", "admin@myDomain.com",["https://www.googleapis.com/auth/gmail.readonly","https://www.googleapis.com/auth/pubsub"]); 
-  makeTopic();
-  subscribe();  
-  grantPublishRights();  
+  Logger.log(makeTopic(token.token));
+  Logger.log(subscribe(token.token));  
+  Logger.log(grantPublishRights(token.token));  
   
 }
 // this is how you would request a token and enroll the email to send push notifications
