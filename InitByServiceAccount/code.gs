@@ -1,11 +1,12 @@
 //This example uses the library: MJ5317VIFJyKpi9HCkXOfS0MLm9v2IJHf with the 'GSA' Identifier.
 
-// Run once to setup notifications
+// Run once to setup notifications. The account should be the owner of the Dev Console Project your service account is under. 
+// I haven't tested it, but an editor should also work.
 function setupGmailPush(){
-  var token = getAuthorizationToken("saToken", "admin@myDomain.com",["https://www.googleapis.com/auth/gmail.readonly","https://www.googleapis.com/auth/pubsub"]); 
-  Logger.log(makeTopic(token.token));
-  Logger.log(subscribe(token.token));  
-  Logger.log(grantPublishRights(token.token));  
+  var ownerToken = getAuthorizationToken("saToken", "admin@myDomain.com",["https://www.googleapis.com/auth/gmail.readonly","https://www.googleapis.com/auth/pubsub"]); 
+  Logger.log(makeTopic(ownerToken.token));
+  Logger.log(subscribe(ownerToken.token));  
+  Logger.log(grantPublishRights(ownerToken.token));  
   
 }
 // this is how you would request a token and enroll the email to send push notifications
