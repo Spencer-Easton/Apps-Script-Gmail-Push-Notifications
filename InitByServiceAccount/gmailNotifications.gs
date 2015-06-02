@@ -1,5 +1,6 @@
 var TOPIC = "projects/{SERVICE ACCOUNT PROJECTID}/topics/gmailPush";
 var SUBSCRIPTION = "projects/{SERVICE ACCOUNT PROJECTID}/subscriptions/myGmailNotification";
+var ENDPOINTURL = "https://script.google.com/a/macros/ccsknights.org/s/AKfycbzuFMYaUBq4J7T31az-gEjRMbhBKB0Ad6qGMqbEGujfNR6WN5E/exec";
 
 function makeTopic(token, eBackoff){
   var eBackoff = eBackoff || 0;
@@ -33,7 +34,7 @@ function subscribe(token, eBackoff){
   var payload = {
     "topic": TOPIC, 
     "pushConfig": {
-      "pushEndpoint": "https://script.google.com/a/macros/ccsknights.org/s/AKfycbzuFMYaUBq4J7T31az-gEjRMbhBKB0Ad6qGMqbEGujfNR6WN5E/exec"
+      "pushEndpoint": ENDPOINTURL
     }
   };
   
