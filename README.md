@@ -13,7 +13,8 @@ https://github.com/googlesamples/apps-script-oauth2
 Enable the APIs: Google Cloud Pub/Sub and Gmail Api  
 Generate web credentials. Add the client_id and client_secret to the script properties.
 
-Change the TOPIC and SUBSCRIPTION strings for your own project id, topic and subscriptions names. The names can be whatever you choose and are simply frendly names to use for reference.
+Change the TOPIC and SUBSCRIPTION strings for your own project id, topic and subscriptions names. The names can be whatever you choose and are simply frendly names to use for reference.  
+Change the ENDPOINTURL to the url of your published webapp. This should match what you put into the Dev Console but addidng the '/exec'
 
 var TOPIC = "projects/{Your Dev Console ProjectId}/topics/{Topic Name}";   
 var SUBSCRIPTION = "projects/{Your Dev Console ProjectId}/subscriptions/{Subscription Name}";
