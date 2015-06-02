@@ -1,6 +1,6 @@
 var TOPIC = "projects/api-project-772466249334/topics/gmailPush";
 var SUBSCRIPTION = "projects/api-project-772466249334/subscriptions/myGmailNotification";
-
+var ENDPOINTURL = "https://script.google.com/a/macros/ccsknights.org/s/AKfycbzuFMYaUBq4J7T31az-gEjRMbhBKB0Ad6qGMqbEGujfNR6WN5E/exec"
 function pubsubService() {
   return OAuth2.createService('cloud')
       .setAuthorizationBaseUrl('https://accounts.google.com/o/oauth2/auth')
@@ -65,7 +65,7 @@ function subscribe(){
   var payload = {
     "topic": TOPIC, 
     "pushConfig": {
-      "pushEndpoint": "https://script.google.com/a/macros/ccsknights.org/s/AKfycbzuFMYaUBq4J7T31az-gEjRMbhBKB0Ad6qGMqbEGujfNR6WN5E/exec"
+      "pushEndpoint": ENDPOINTURL
     }
   };
   
