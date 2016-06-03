@@ -4,7 +4,7 @@ A very rough example on how to get push notification from gmail in Google Apps S
 note: I added a initByServiceAccount folder. In there you can see an example on how to create the notiofication pub/sub and enroll users in your domain using a service account.
 
 Some setup notes:
-For this to work you must first publish your script as a draft to the chrome webstore. Then in the dev console add your scripts published webapp URL without the trailing '/exec' to APIs & Auth -> Push
+For this to work you must first publish your script as a draft to the chrome webstore. Then in the dev console add your scripts published webapp URL without the trailing '/exec' to API Manager -> Credentials -> Domain Verification
 
 This uses the Oauth2 Library for authentication:
 MswhXl8fVhTFUH_Q3UOJbXvxhMjh3Sh48  
