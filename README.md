@@ -1,6 +1,9 @@
 # Apps-Script-Gmail-Push-Notifications
 A very rough example on how to get push notification from gmail in Google Apps Script
 
+###An updated version of this project can be found at:  
+#####[https://github.com/Spencer-Easton/Apps-Script-Gmail-Push-Notifications-v2](https://github.com/Spencer-Easton/Apps-Script-Gmail-Push-Notifications-v2)
+
 note: I added a initByServiceAccount folder. In there you can see an example on how to create the notiofication pub/sub and enroll users in your domain using a service account.
 
 Some setup notes:
